@@ -1,0 +1,141 @@
+html, body {
+	height: 100%;
+  background-color: #FFFFE0;
+  margin: 0;
+  padding: 0;
+}
+
+#maintitle{
+  font-size: 20px;
+}
+
+/* Reset default list styles and remove text decoration for links */
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white; /* Set the text color to white */
+}
+
+/* Style the navbar background */
+.navbar {
+  background-color: #9fc554	; /* Set the background color to black */
+  padding: 10px 0;
+}
+
+.dropdown-menu {
+  background-color: #9fc554;
+}
+
+#maintitle{
+  color: #9fc554;
+  font-size: 50px;
+}
+
+h2{
+  text-align: center !important;
+}
+
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+
+.carousel {
+  height: 400px;
+  width: 400px;
+  position : relative; /* Ensure positioning context */
+  overflow: hidden; /* Hide any overflowing content */
+  background-color: #FFFFE0; /* Set the background color of the carousel */
+
+}
+
+.carousel-inner img {
+  height: auto;
+  width: 400px;
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Sub-Menu
+--------------------------------------------------------------*/
+
+.dropdown-menu li {
+position: relative;
+}
+
+.dropdown-menu .dropdown-submenu {
+display: none;
+position: absolute;
+left: 100%;
+top: -7px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+}
+
+@media (max-width: 991px) {
+    .dropdown-menu .dropdown-submenu {
+      display: none;
+      position: static;
+      left: auto;
+      top: auto;
+    }
+  }
+
+/*--------------------------------------------------------------
+# Search bar
+--------------------------------------------------------------*/
+#searchForm .input-group .dropdown-menu{
+  right: 0;
+  left: auto;  
+}
+
+@media (max-width: 991px) {
+  #searchForm .input-group {
+    padding-left: 0;
+    width: auto;
+  }
+
+  #searchForm .input-group .form-control{
+    max-width: 150px;
+  }
+
+  #searchForm .input-group .dropdown-menu{
+    position:absolute;
+  }
+}
+
+/*--------------------------------------------------------------
+# Placeholder Colour
+--------------------------------------------------------------*/
+
+.form-select{
+  border: 0;
+  text-align: left;
+  padding: 0;
+  background-image: none;
+}
+
+.form-select .dselect-placeholder{
+  color:#6C757D;
+}
+
+
+#artist_link {
+  padding: 0;
+}
