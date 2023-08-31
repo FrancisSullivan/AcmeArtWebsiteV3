@@ -6,7 +6,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item" id="logo-img">
-                    <a class="nav-link" aria-current="page" href="../static/home.php"><img src="../images/logo.png" class="img-thumbnail" alt="logo" width="50" height="50" background-size="contain"></a>
+                    <a class="nav-link" aria-current="page" href="../static/home.php"><img src="../images/logo2.png" class="img-thumbnail" alt="logo" width="50" height="50" background-size="contain"></a>
                 </li>
             
                 <!-- Home Page. -->
