@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <h2 id="maintitle" >Team </h2>
+                <h2 id="maintitle" >Team <img src="../images/logo.png" class="img-thumbnail" alt="logo" width="100" height="100"></h2>
 
                 <p class="lead">
                     Team name:  King Rabbit <br>
