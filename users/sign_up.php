@@ -18,7 +18,7 @@
         <!-- Container. -->
         <div class="container-fluid">
             <!-- Heading. -->
-            <h2>Sign Up to Acme: </h2>
+            <h2>Newsletter Subscription: </h2>
             <!-- Form. -->
             <!-- Source: https://www.w3schools.com/TAGs/att_form_enctype.asp -->
             <form action="add_status.php" method="post" enctype="multipart/form-data">
