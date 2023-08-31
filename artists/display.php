@@ -5,12 +5,6 @@ $result = (connect()->query($statement));
 $rows = $result->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!-- Table. --> 
-<!-- Connect. -->
-<?php
-include_once('../components/connect.php');
-$result = (connect()->query($statement));
-$rows = $result->fetchAll(PDO::FETCH_ASSOC);
-?>
 <!-- Gallery. --> 
 <div class="container my-5">
     <div class="row">

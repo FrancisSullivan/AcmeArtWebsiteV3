@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Delete Artists - AT2 Sprint 2</title>
+        <title>Delete Users - AT2 Sprint 2</title>
     </head>
     <body>
         <?php
@@ -15,11 +15,11 @@
         ?>
         <div class="container-fluid">
             <!-- Heading. -->
-            <h2>Delete Painting</h2>
+            <h2>Delete User</h2>
             <?php
             $selection = $_GET['id'];
-            $statement = "SELECT * FROM artists WHERE artist_id = '$selection'";
-            $origin = "delete_artists.php";
+            $statement = "SELECT * FROM users WHERE user_id = '$selection'";
+           
             //Table
             include_once('display.php');
             ?>
@@ -27,7 +27,7 @@
             <p class="lead">
                 Are you sure you want to delete this record?<br>
             </p>
-            <a href="delete_status.php?id=<?php echo $row['artist_id']; ?>" class="btn btn-outline-danger" name="delete_button_yes">Yes</a>
+            <a href="delete_status.php?id=<?php echo $row['user_id']; ?>" class="btn btn-outline-danger" name="delete_button_yes">Yes</a>
             <a href="delete_status.php?id=not_applicable" class="btn btn-outline-primary" name="delete_button_no">No</a>
             <!-- Footer. -->
             <?php

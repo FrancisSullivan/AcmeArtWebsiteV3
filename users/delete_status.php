@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Delete Artists - AT2 Sprint 2</title>
+        <title>Delete Users - AT2 Sprint 2</title>
     </head>
     <body>
         <!-- Navbar. -->
@@ -17,7 +17,7 @@
         <!-- Container. -->
         <div class="container-fluid">
             <!-- Heading. -->
-            <h2>Delete Status</h2>
+            <h2>Delete Users Status</h2>
             <!-- Backend code. -->
             <?php
             // Connect.
@@ -31,7 +31,7 @@
                     <?php
                 } else {
                     $id = $_GET['id'];
-                    $statement = "DELETE FROM artists WHERE artist_id = '$id'";
+                    $statement = "DELETE FROM users WHERE user_id = '$id'";
                     $execute = (connect()->query($statement));
                     echo "Record was deleted successfully! :).";
                 }

@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Add Artists- AT2 Sprint 2</title>
+        <title>Edit Users - AT2 Sprint 2</title>
     </head>
     <body>
         <!-- Navbar. -->
@@ -17,7 +17,7 @@
         <!-- Container. -->
         <div class="container-fluid">
             <!-- Heading. -->
-            <h2>Add Users Status</h2>
+            <h2>Edit Users Status</h2>
             <!-- Backend code. -->
             <?php
             // Connect.
@@ -26,18 +26,17 @@
             try {
                 // Use POST to save form inputs to php variables.
                 if (isset($_POST["submit_button"])) {
-
-                    $user_name = $_POST["add_user_name"] ?? '';
-                    $user_email = $_POST["add_email"] ?? '';
-                    $subscription_monthly = isset($_POST["add_subscription_monthly"]) ? 1 : 0;
-                    $subscription_breaking = isset($_POST["add_subscription_breaking_news"]) ? 1 : 0;
-
-                    }
-                    $statement = "INSERT INTO users (user_name, user_email, subscription_monthly, subscription_breaking_news) VALUES ('$user_name', '$user_email', '$subscription_monthly', '$subscription_breaking')";
+                    $id = $_GET["id"];                    
+                    $user_name = $_POST["add_user_name"] ? $_POST["add_user_name"] : '';
+                    $user_email = $_POST["add_user_email"] ? $_POST["add_user_email"] : '';
+                    $subscription_monthly = $_POST["add_subscription_monthly"] ? $_POST["add_subscription_monthly"] : 0;
+                    $subscription_breaking_news = $_POST["add_subscription_breaking_news"] ? $_POST["add_subscription_breaking_news"] : 0;
+                    $is_pending = $_POST["add_is_pending"] ? $_POST["add_is_pending"] : 0;
+                    $statement = "UPDATE users SET user_name = '$user_name', user_email = '$user_email', subscription_monthly = '$subscription_monthly', subscription_breaking_news = '$subscription_breaking_news', is_pending = '$is_pending' WHERE user_id = '$id'";
                     $execute = (connect()->query($statement));
-                    echo "Record was added successfully! :).";
+                    echo "Record was updated successfully! :).";
                 }
-             catch (Exception $ex) {
+            } catch (Exception $ex) {
                 echo "Add failed :( Something was entered incorectly. Please check that every box was filled in correctly and try again.";
                 ?>
                 <img src = "../images\surprised_pikachu.png" class = "d-block" alt = "second_one" width = "400" height = "350">

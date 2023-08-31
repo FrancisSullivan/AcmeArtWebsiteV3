@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Add new artists - AT2 Sprint 2</title>
+        <title>Add new users - AT2 Sprint 2</title>
     </head>
     <!-- Body. -->
     <body>
@@ -18,19 +18,19 @@
         <!-- Container. -->
         <div class="container-fluid">
             <!-- Heading. -->
-            <h2>Add New Artist: </h2>
+            <h2>Sign Up to Acme: </h2>
             <!-- Form. -->
             <!-- Source: https://www.w3schools.com/TAGs/att_form_enctype.asp -->
             <form action="add_status.php" method="post" enctype="multipart/form-data">
                 <!-- artist_name. -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="add_user_name" style="width: 110px;">User Name</span>
-                    <input type="text" class="form-control" placeholder="e.g. 'Michelangelo'" aria-label="user_name" aria-describedby="add_user_name" name="add_user_name">
+                    <input type="text" class="form-control" placeholder="e.g. 'johnn123'" aria-label="user_name" aria-describedby="add_user_name" name="add_user_name">
                 </div>                
                 <!-- lifespan. -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="add_email" style="width: 110px;">Email </span>
-                    <input type="text" class="form-control" placeholder="e.g. 'abcd@gmail.com'" aria-label="email" aria-describedby="add_email" name="add_email">
+                    <input type="text" class="form-control" placeholder="e.g. 'johnn123@gmail.com'" aria-label="email" aria-describedby="add_email" name="add_email">
                 </div>
                 <!-- newsletter. -->
                 <div class="input-group mb-3">

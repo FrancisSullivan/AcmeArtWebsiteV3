@@ -18,7 +18,7 @@
             <h2>Delete Painting</h2>
             <?php
             $selection = $_GET['id'];
-            $statement = "SELECT * FROM paintings WHERE painting_id = '$selection'";
+            $statement = "SELECT p.*, a.artist_name FROM paintings p JOIN artists a ON p.artist_id = a.artist_id WHERE painting_id = '$selection'";            
             $origin = "delete_painting.php";
             //Table
             include_once('display.php');
