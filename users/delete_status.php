@@ -42,6 +42,10 @@
                 <?php
             }
             ?>
+            <br>
+            <br>
+            <a href="../users/select_all_edit_delete.php" class="btn btn-link">Back to Admin Panel</a>
+            
             <!-- Footer. -->
             <?php
             include_once('../components/footer.php');

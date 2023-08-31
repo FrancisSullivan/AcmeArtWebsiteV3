@@ -33,7 +33,7 @@
                     
 
                     if ($admin_username === $adminUsername && $admin_password === $adminPassword) {
-                        // Redirect to the admin panel
+                        // Redirect to the admin panel. Header direct has been called on navbar thus javascript is used to redirect URL.
                         echo '<script>window.location.href="../users/select_all_edit_delete.php";</script>';
 
                         // header("Location: ../users/select_all_edit_delete.php");
