@@ -22,6 +22,9 @@
             //Calling Table
             include_once('display.php');
             ?>
+            <a>
+                *** Input "0" for FALSE and "1" for TRUE
+            </a>
             <!-- Footer. -->
             <?php
             include_once('../components/footer.php');

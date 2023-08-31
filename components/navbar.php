@@ -103,7 +103,7 @@
                     <a class="nav-link" aria-current="page" href="../static/contact_us.php">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="signup" href="../users/sign_up.php">Sign Up</a>
+                    <a class="nav-link" aria-current="signup" href="../users/sign_up.php">Our Newsletters</a>
                 </li>
                 </ul>
   
