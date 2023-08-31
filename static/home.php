@@ -13,7 +13,7 @@
         <?php
         include_once('../components/navbar.php');
         ?>
-        
+
         <div class="container-fluid mb-4 mt-4">
             <div class="row ">
                 <div class="col-lg-3 col-md-3 col-sm-12 col-12">
@@ -52,6 +52,8 @@
                 <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-4 d-flex justify-content-center align-items-center">  
                     <div class="text-center">
                         <h2 id="maintitle"><strong>Acme Art</strong></h2><br><br>
+                        <button id="readButton">Start Reading</button> 
+                        <p id="status"></p>
 
                         <p class="lead">
                             Welcome to Acme Art Gallery<br>
@@ -67,18 +69,44 @@
             </div>
             <div class="text-center mt-4">
                 <h2 id="maintitle" >Team <img src="../images/logo.png" class="img-thumbnail" alt="logo" width="100" height="100"></h2>
-                
+
                 <p class="lead">
                     Team name:  King Rabbit <br>
-                    Team Leader: Dongyun Huang<br>
+                    Team Leader: Francis Sullivan<br>
                     Team Member #1: Derrick Choong<br>
-                    Team Member #2: Francis Sullivan<br>
+                    Team Member #2: Dongyun Huang<br>
                 </p>
             </div>
         </div>
-        
+
+        <script>
+            const readButton = document.getElementById('readButton');
+            const statusParagraph = document.getElementById('status');
+            let isReading = false; // Keep track of the reading state
+
+            readButton.addEventListener('click', () => {
+                const paragraphs = document.querySelectorAll('p'); // Select all paragraphs
+                const paragraphsText = Array.from(paragraphs).map(paragraph => paragraph.textContent).join(' ');
+
+                if (!isReading) {
+                    // Start reading
+                    const speech = new SpeechSynthesisUtterance(paragraphsText);
+                    speechSynthesis.speak(speech);
+                    readButton.textContent = 'Pause Reading';
+                    statusParagraph.textContent = 'Reading in progress...';
+                } else {
+                    // Pause reading
+                    speechSynthesis.cancel();
+                    readButton.textContent = 'Resume Reading';
+                    statusParagraph.textContent = 'Reading paused';
+                }
+
+                isReading = !isReading; // Toggle the reading state
+            });
+        </script>
+
         <?php
-            include_once('../components/footer.php');
-            ?>
+        include_once('../components/footer.php');
+        ?>
     </body>
 </html>

@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Contact Us - AT2 Sprint 2</title>
+        <title>Contact Us - AT2 Sprint 3</title>
     </head>
     <body>
         <?php
@@ -20,7 +20,7 @@
             <div class="d-flex justify-content-center align-items-center">
                 <div>
                     <img src="../images/logo.png" class="img-thumbnail" alt="logo"  width="300"><br>
-                <p class="text-center">Boss's Email:<br><u>30042104@tafe.wa.edu.au</u></p><br>
+                <p class="text-center">Boss's Email:<br><u>30034007@tafe.wa.edu.au</u></p><br>
                 <p class="text-center">Websites:<br><a href="https://www.citems.com.au/">CITE</a><br>            
                     <a href="https://www.southmetrotafe.wa.edu.au">SMTAFE</a> </p>
                 </div>
