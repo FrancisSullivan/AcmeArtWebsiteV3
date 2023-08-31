@@ -18,12 +18,12 @@
                 <!-- artist_name. -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="add_admin_username" style="width: 110px;">Username</span>
-                    <input type="text" class="form-control" placeholder="e.g. 'admin'" aria-label="admin_username" aria-describedby="add_admin_username" name="add_admin_username" require>
+                    <input type="text" class="form-control" placeholder="e.g. 'admin'" aria-label="admin_username" aria-describedby="add_admin_username" name="add_admin_username" required>
                 </div>                
                 <!-- lifespan. -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="add_admin_password" style="width: 110px;">Password</span>
-                    <input type="text" class="form-control" placeholder="e.g. 'password'" aria-label="admin_password" aria-describedby="add_admin_password" name="add_admin_password" require>
+                    <input type="text" class="form-control" placeholder="e.g. 'password'" aria-label="admin_password" aria-describedby="add_admin_password" name="add_admin_password" required>
                 </div>
                 <!-- Save. -->
                 <div class="d-grid gap-2 col-6 mx-auto">

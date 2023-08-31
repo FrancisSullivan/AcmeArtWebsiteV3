@@ -22,15 +22,15 @@
             <!-- Form. -->
             <!-- Source: https://www.w3schools.com/TAGs/att_form_enctype.asp -->
             <form action="add_status.php" method="post" enctype="multipart/form-data">
-                <!-- artist_name. -->
+                <!-- Username. -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="add_user_name" style="width: 110px;">User Name</span>
                     <input type="text" class="form-control" placeholder="e.g. 'johnn123'" aria-label="user_name" aria-describedby="add_user_name" name="add_user_name" required>
                 </div>                
-                <!-- lifespan. -->
+                <!-- Email. -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="add_email" style="width: 110px;">Email </span>
-                    <input type="text" class="form-control" placeholder="e.g. 'johnn123@gmail.com'" aria-label="email" aria-describedby="add_email" name="add_email">
+                    <input type="email" class="form-control" placeholder="e.g. 'johnn123@gmail.com'" aria-label="email" aria-describedby="add_email" name="add_email" required>
                 </div>
                 <!-- newsletter. -->
                 <div class="input-group mb-3">
@@ -50,7 +50,7 @@
                 <!-- Save. -->
                 <div class="d-flex justify-content-center align-items-center gap-2 col-6 mx-auto">
                     <button class="btn btn-success" type="submit" name="subscribe_button" width="500">Subscribe to Selected</button>
-                    <button class="btn btn-success" type="submit" name="unsubscribe_button" width="500">Unsubscribe to All</button>
+                    <button class="btn btn-success" type="submit" name="unsubscribe_button" width="500">Unsubscribe from All</button>
                 </div>
 
             </form>
