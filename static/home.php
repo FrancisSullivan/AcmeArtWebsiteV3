@@ -29,13 +29,13 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images\waterliliesandjapanesebridge.gif" class="d-block" alt="first_one">
+                                    <img src="../images\waterliliesandjapanesebridge.gif" class="d-block" alt="first_one" width="400" height="400">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images\weaver.gif" class="d-block" alt="second_one">
+                                    <img src="../images\weaver.gif" class="d-block" alt="second_one" width="400" height="400">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images\donitondo2.gif" class="d-block" alt="third_one">
+                                    <img src="../images\donitondo2.gif" class="d-block" alt="third_one" width="400" height="400">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -51,15 +51,15 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-4 d-flex justify-content-center align-items-center">  
                     <div class="text-center">
-                        <h2 id="maintitle"><strong>Acme Art</strong></h2><br><br>
+                        <h2 id="maintitle"><strong>Acme Arts</strong></h2><br><br>
                         <button id="readButton">Start Reading</button> 
                         <p id="status"></p>
 
                         <p class="lead">
-                            Welcome to Acme Art Gallery<br>
-                            World Class Artist<br>
+                            Welcome to the Acme Arts' Gallery<br>
+                            World Class Artists<br>
                             Collectible Paints<br>
-                            Present to you by KING RABBIT<br>
+                            Presented to you by KING RABBIT<br>
                         </p>
                     </div>                    
                 </div>
@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <h2 id="maintitle" >Team <img src="../images/logo.png" class="img-thumbnail" alt="logo" width="100" height="100"></h2>
+                <h2 id="maintitle" >Team </h2>
 
                 <p class="lead">
                     Team name:  King Rabbit <br>
