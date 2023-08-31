@@ -17,7 +17,7 @@
         <!-- Container. -->
         <div class="container-fluid">
             <!-- Heading. -->
-            <h2>Admin Login Status</h2>
+            <h2>Admin Panel Status</h2>
             <!-- Backend code. -->
             
             <?php
@@ -30,10 +30,13 @@
 
                     $adminUsername = "kingrabbitadmin1";
                     $adminPassword = "p@ssw0rd123";
+                    
 
                     if ($admin_username === $adminUsername && $admin_password === $adminPassword) {
                         // Redirect to the admin panel
-                        header("Location: ../users/select_all_edit_delete.php");
+                        echo '<script>window.location.href="../users/select_all_edit_delete.php";</script>';
+
+                        // header("Location: ../users/select_all_edit_delete.php");
                         exit();
                     } else {
                         echo "Invalid username or password.";

@@ -48,21 +48,23 @@ h2{
 /*--------------------------------------------------------------
 # Carousel
 --------------------------------------------------------------*/
-
+/* 
 .carousel {
   height: 400px;
   width: 400px;
-  position : relative; /* Ensure positioning context */
-  overflow: hidden; /* Hide any overflowing content */
-  background-color: #FFFFE0; /* Set the background color of the carousel */
+  position : relative; 
+  overflow: hidden;
+  background-color: #FFFFE0; 
 
-}
+} */
 
+/*
 .carousel-inner img {
-  height: auto;
+  height: 400px;
   width: 400px;
   display: block;
 }
+*/
 
 /*--------------------------------------------------------------
 # Sub-Menu
