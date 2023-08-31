@@ -27,25 +27,26 @@
                 // Use POST to save form inputs to php variables.
                 if (isset($_POST["subscribe_button"])) {
 
-                    $user_name = $_POST["add_user_name"] ?? '';
-                    $user_email = $_POST["add_email"] ?? '';
+                    $user_name = $_POST["add_user_name"] ? $_POST["add_user_name"] : '';
+                    $user_email = $_POST["add_email"] ? $_POST["add_email"] : '';
                     $subscription_monthly = isset($_POST["add_subscription_monthly"]) ? 1 : 0;
                     $subscription_breaking = isset($_POST["add_subscription_breaking_news"]) ? 1 : 0;
 
                      // Check for duplicate user name or email
-                    $duplicateCheck = "SELECT COUNT(*) as count FROM users WHERE user_name = :user_name OR user_email = :user_email";
-                    $duplicateExecute = connect()->prepare($duplicateCheck);
-                    $duplicateExecute->bindValue(':user_name', $user_name);
-                    $duplicateExecute->bindValue(':user_email', $user_email);
-                    $duplicateExecute->execute();
-                    $duplicateCount = $duplicateExecute->fetch(PDO::FETCH_ASSOC)['count'];
+                     $duplicateCheck = "SELECT COUNT(*) as count FROM users WHERE user_name = :user_name OR user_email = :user_email";
+                     $duplicateExecute = connect()->prepare($duplicateCheck);
+                     $duplicateExecute->bindValue(':user_name', $user_name);
+                     $duplicateExecute->bindValue(':user_email', $user_email);
+                     $duplicateExecute->execute();
+                     $duplicateCount = $duplicateExecute->fetch(PDO::FETCH_ASSOC)['count'];
+                    
                     
                     if ($duplicateCount > 0) {
                         echo "User Name or Email already exists.";
                     } else {
                         // Insert new record
                         $insertStatement = "INSERT INTO users (user_name, user_email, subscription_monthly, subscription_breaking_news) VALUES ('$user_name', '$user_email', '$subscription_monthly', '$subscription_breaking')";
-                        $insertExecute = (connect()->query($insertStatement));
+                        $execute = (connect()->query($insertStatement));
                         echo "Record was added successfully! :).";
                     } }
                     
