@@ -26,7 +26,6 @@
 
                 if ($row) {
                     // Populate variables with fetched data
-                    $user_name = isset($row['user_name']) ? $row['user_name'] : '';
                     $user_email = isset($row['user_email']) ? $row['user_email'] : '';
                     $subscription_monthly = isset($row['subscription_monthly']) ? $row['subscription_monthly'] : '';
                     $subscription_breaking_news = isset($row['subscription_breaking_news']) ? $row['subscription_breaking_news'] : '';
@@ -47,12 +46,6 @@
             <!-- Form. -->
             <!-- Source: https://www.w3schools.com/TAGs/att_form_enctype.asp -->
             <form action="edit_status.php?id=<?php echo $id?>" method="post" enctype="multipart/form-data">
-                <!-- User Name. -->
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="add_user_name" style="width: 110px;">User Name</span>
-                    <input type="text" class="form-control" placeholder="eg. johnny123" aria-label="user_name" aria-describedby="add_user_name" name="add_user_name" value="<?php echo $user_name; ?>">
-                </div>
-
                 <!-- User Email. -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="add_user_email" style="width: 110px;">User Email</span>

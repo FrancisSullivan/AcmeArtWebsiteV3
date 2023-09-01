@@ -13,7 +13,6 @@
                 <tr>
                     <!-- Headers. --> 
                     <th>ID</th>
-                    <th>User Name</th>
                     <th>User_Email</th>
                     <th>Subscription to Monthly Newsletter</th>
                     <th>Subscription to Breaking News</th>
@@ -28,7 +27,6 @@
                     <tr>
                         <!-- Content. --> 
                         <td><?php echo $row['user_id']; ?></td>
-                        <td><?php echo $row['user_name']; ?></td>
                         <td><?php echo $row['user_email']; ?></td>
                         <td><?php echo $row['subscription_monthly']; ?></td>
                         <td><?php echo $row['subscription_breaking_news']; ?></td>

@@ -22,11 +22,7 @@
             <!-- Form. -->
             <!-- Source: https://www.w3schools.com/TAGs/att_form_enctype.asp -->
             <form action="add_status.php" method="post" enctype="multipart/form-data">
-                <!-- Username. -->
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="add_user_name" style="width: 110px;">User Name</span>
-                    <input type="text" class="form-control" placeholder="e.g. 'johnn123'" aria-label="user_name" aria-describedby="add_user_name" name="add_user_name" required>
-                </div>                
+                     
                 <!-- Email. -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="add_email" style="width: 110px;">Email </span>
