@@ -2,6 +2,11 @@
 <html lang="en">
     <!-- Head. -->
     <head>
+        <style>
+            .highlighted {
+                background-color: pink;
+            }
+        </style>
         <!-- Bootstrap call. --> 
         <?php
         include_once('../components/bootstrap.php');
@@ -29,13 +34,13 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images\waterliliesandjapanesebridge.gif" class="d-block" alt="first_one">
+                                    <img src="../images\waterliliesandjapanesebridge.gif" class="d-block" alt="first_one" width="400" height="400">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images\weaver.gif" class="d-block" alt="second_one">
+                                    <img src="../images\weaver.gif" class="d-block" alt="second_one" width="400" height="400">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images\donitondo2.gif" class="d-block" alt="third_one">
+                                    <img src="../images\donitondo2.gif" class="d-block" alt="third_one" width="400" height="400">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -51,15 +56,15 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-4 d-flex justify-content-center align-items-center">  
                     <div class="text-center">
-                        <h2 id="maintitle"><strong>Acme Art</strong></h2><br><br>
-                        <button id="readButton" style="color:green;">Start Reading</button> 
+                        <h2 id="maintitle"><strong>Acme Arts</strong></h2><br><br>
+                        <button id="readButton" type="button" class="btn btn-success">Start Reading</button> 
                         <p id="status"></p>
 
                         <p class="lead">
-                            Welcome to Acme Art Gallery<br>
-                            World Class Artist<br>
-                            Collectible Paints<br>
-                            Present to you by KING RABBIT<br>
+                            Welcome to the Acme Arts' Gallery<br>
+                            World Class Artists<br>
+                            Collectible Paintings<br>
+                            Presented to you by KING RABBIT<br>
                         </p>
                     </div>                    
                 </div>
@@ -82,15 +87,19 @@
         <script>
             const readButton = document.getElementById('readButton');
             const statusParagraph = document.getElementById('status');
-            let isReading = false; // Keep track of the reading state
+            let isReading = false;
+            let speech = null;
+            let words = [];
 
             readButton.addEventListener('click', () => {
-                const paragraphs = document.querySelectorAll('p'); // Select all paragraphs
+                const paragraphs = document.querySelectorAll('p');
                 const paragraphsText = Array.from(paragraphs).map(paragraph => paragraph.textContent).join(' ');
+
+                words = paragraphsText.split(/\s+/); // Split text into individual words
 
                 if (!isReading) {
                     // Start reading
-                    const speech = new SpeechSynthesisUtterance(paragraphsText);
+                    speech = new SpeechSynthesisUtterance(paragraphsText);
                     speechSynthesis.speak(speech);
                     readButton.textContent = 'Pause Reading';
                     statusParagraph.textContent = 'Reading in progress...';
@@ -101,9 +110,44 @@
                     statusParagraph.textContent = 'Reading paused';
                 }
 
-                isReading = !isReading; // Toggle the reading state
+                isReading = !isReading;
             });
-        </script>"
+
+            // Highlight the word at the given index
+            function highlightWord(index) {
+                const wordElement = document.getElementById('word-' + index);
+                if (wordElement) {
+                    wordElement.classList.add('highlighted');
+                }
+            }
+
+            // Reset the highlighting
+            function resetHighlighting() {
+                const highlightedWords = document.querySelectorAll('.highlighted');
+                highlightedWords.forEach(wordElement => {
+                    wordElement.classList.remove('highlighted');
+                });
+            }
+
+            // Highlight words as speech progresses
+            speechSynthesis.addEventListener('boundary', event => {
+                if (event.name === 'word') {
+                    const charIndex = event.charIndex;
+                    let wordIndex = 0;
+
+                    for (let i = 0; i < words.length; i++) {
+                        const word = words[i];
+                        if (charIndex >= wordIndex && charIndex < wordIndex + word.length) {
+                            resetHighlighting();
+                            highlightWord(i);
+                            break;
+                        }
+                        wordIndex += word.length + 1; // +1 for space
+                    }
+                }
+            });
+        </script>
+
         <?php
         include_once('../components/footer.php');
         ?>
