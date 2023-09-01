@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Delete - AT2 Sprint 2</title>
+        <title>Delete - AT2 Sprint 3</title>
     </head>
     <body>
         <!-- Navbar. -->

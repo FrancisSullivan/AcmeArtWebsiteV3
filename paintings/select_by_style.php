@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Select by Style - AT2 Sprint 2</title>
+        <title>Select by Style - AT2 Sprint 3</title>
     </head>
     <body>
         <?php
@@ -16,6 +16,8 @@
         <div class="container-fluid">
             <!-- Heading. -->
             <h2>Paintings by Style</h2>
+            <button id="readButton" type="button" class="btn btn-success">Read Aloud</button> 
+            <p id="status"></p>
             <?php
             include_once('../components/connect.php');
             $db = connect();
