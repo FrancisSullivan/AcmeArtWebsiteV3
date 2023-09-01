@@ -3,13 +3,9 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- <a class="navbar-brand" href="../static/home.php"><img src="../images/logo2.png" alt="logo" width="50" height="50"></a> -->
+        <a class="navbar-brand" href="../static/home.php"><img src="../images/logo2.png" alt="logo" width="50" height="50"></a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <!-- Home Page. -->
-                <li class="nav-item" id="logo-img">
-                    <a class="nav-link" aria-current="page" href="../static/home.php"><img src="../images/logo2.png" alt="logo" width="50" height="50"></a>
-                </li>
                 <!-- Home Page. -->
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="../static/home.php">Home</a>
@@ -23,7 +19,7 @@
                         <li><a class="dropdown-item" href="../artists/select_all.php">Show all Artists</a></li>    
                     </ul>
                 </li>
-                
+
                 <!-- Function for dynamic dropdown elements. -->
                 <!-- We can use this method to display list items for all dropdown menu. eg: Style/Artist/..?-->      
                 <?php
@@ -60,7 +56,7 @@
                         </li>
                     </ul>
                 </li>
-                
+
                 <!-- Filter Artist -->  
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Artists Filter</a>
@@ -78,7 +74,7 @@
                         </li>
                     </ul>
                 </li>
-               
+
                 <!-- Modify Database. -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modify Database</a>
@@ -96,7 +92,7 @@
                                 <li><a class="dropdown-item" href="../paintings/select_all_edit_delete.php">Edit/Delete Paintings</a></li>    
                             </ul>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <!-- Contact Page. -->
@@ -106,8 +102,12 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="signup" href="../users/sign_up.php">Our Newsletters</a>
                 </li>
-                </ul>
-  
+                <li class="nav-item">
+                    <button id="readButton" type="button" class="btn btn-success">Read Aloud</button> 
+                    <p id="status"></p>
+                </li>
+            </ul>
+
             <!-- Split button dropdown wrapper -->
             <form class="d-flex ms-auto" id="searchForm" method="GET">
                 <div class="input-group">
@@ -117,19 +117,19 @@
                     <!-- Using div instead of ul for input-group-append -->
                     <div class="input-group-append">
                         <button class="btn btn-outline-success dropdown-toggle" style="color:white;" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search</button>
-                        
+
                         <div class="dropdown-menu">
                             <!-- Option to search in paintings -->
-                            <a class="dropdown-item" href="#" onclick="document.getElementById('searchForm').action='../paintings/select_by_search.php'; document.getElementById('searchForm').submit();">Paintings</a>
-                            
+                            <a class="dropdown-item" href="#" onclick="document.getElementById('searchForm').action = '../paintings/select_by_search.php'; document.getElementById('searchForm').submit();">Paintings</a>
+
                             <!-- Option to search in artists -->
-                            <a class="dropdown-item" href="#" onclick="document.getElementById('searchForm').action='../artists/select_by_search.php'; document.getElementById('searchForm').submit();">Artists</a>
+                            <a class="dropdown-item" href="#" onclick="document.getElementById('searchForm').action = '../artists/select_by_search.php'; document.getElementById('searchForm').submit();">Artists</a>
                         </div>
                     </div>
                 </div>
             </form>
 
         </div>
-        
+
     </div>
 </nav>
