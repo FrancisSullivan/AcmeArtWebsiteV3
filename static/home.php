@@ -52,13 +52,10 @@
                 <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-4 d-flex justify-content-center align-items-center">  
                     <div class="text-center">
                         <h2 id="maintitle"><strong>Acme Arts</strong></h2><br><br>
-                        <button id="readButton">Start Reading</button> 
-                        <p id="status"></p>
-
                         <p class="lead">
                             Welcome to the Acme Arts' Gallery<br>
                             World Class Artists<br>
-                            Collectible Paints<br>
+                            Collectible Paintings<br>
                             Presented to you by KING RABBIT<br>
                         </p>
                     </div>                    
@@ -78,32 +75,6 @@
                 </p>
             </div>
         </div>
-
-        <script>
-            const readButton = document.getElementById('readButton');
-            const statusParagraph = document.getElementById('status');
-            let isReading = false; // Keep track of the reading state
-
-            readButton.addEventListener('click', () => {
-                const paragraphs = document.querySelectorAll('p'); // Select all paragraphs
-                const paragraphsText = Array.from(paragraphs).map(paragraph => paragraph.textContent).join(' ');
-
-                if (!isReading) {
-                    // Start reading
-                    const speech = new SpeechSynthesisUtterance(paragraphsText);
-                    speechSynthesis.speak(speech);
-                    readButton.textContent = 'Pause Reading';
-                    statusParagraph.textContent = 'Reading in progress...';
-                } else {
-                    // Pause reading
-                    speechSynthesis.cancel();
-                    readButton.textContent = 'Resume Reading';
-                    statusParagraph.textContent = 'Reading paused';
-                }
-
-                isReading = !isReading; // Toggle the reading state
-            });
-        </script>
 
         <?php
         include_once('../components/footer.php');
