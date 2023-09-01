@@ -43,11 +43,33 @@
                         <?php
                         }
                         ?>
+                        
+                        <?php
+                        if (isset($origin) && $origin == "select_all_pending.php") {
+                                            ?>
+                        <td>
+                        <a href="edit.php?id=<?php echo $row['user_id']; ?>" class="btn btn-outline-primary" name="edit_button">Edit</a>
+                        <a href="delete.php?id=<?php echo $row['user_id']; ?>" class="btn btn-outline-danger" name="delete_button">Delete</a>
+                        </td>
+
+                        <?php
+                        }
+                        ?>
                     </tr>
                     <?php
                 }
                 ?>
+                              
             </tbody>
-        </table>
+            </table>
+            <?php
+                        if (isset($origin) && $origin == "select_all_pending.php") {
+                                            ?>
+                        <div class="d-flex justify-content-center align-items-center">
+                        <a href="delete_all.php?id=<?php echo $row['user_id']; ?>" class="btn btn-outline-danger" name="delete_button">Delete All Pending Users</a>
+                        </div>
+                        <?php
+                        }
+                        ?>
     </body>
 </html>

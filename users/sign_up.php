@@ -37,14 +37,14 @@
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="add_subscription_monthly_checkbox" name="add_subscription_monthly" value="true">
                     </div>
-                    <div>Subscribe to ACME monthly newsletter?</div>
+                    <div>Subscribe to ACME monthly newsletter</div>
                 </div>
                 <!-- breaking news. -->
                 <div class="input-group mb-3">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="add_subscription_breaking_news_checkbox" name="add_subscription_breaking_news" value="true">
                     </div>
-                    <div>Subscribe to ACME breaking news?</div>
+                    <div>Subscribe to ACME breaking news</div>
                 </div>
 
                 <!-- Save. -->

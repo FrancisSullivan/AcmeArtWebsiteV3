@@ -3,9 +3,13 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="../static/home.php"><img src="../images/logo2.png" alt="logo" width="50" height="50"></a>
+        <!-- <a class="navbar-brand" href="../static/home.php"><img src="../images/logo2.png" alt="logo" width="50" height="50"></a> -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
+                <!-- Home Page. -->
+                <li class="nav-item" id="logo-img">
+                    <a class="nav-link" aria-current="page" href="../static/home.php"><img src="../images/logo2.png" alt="logo" width="50" height="50"></a>
+                </li>
                 <!-- Home Page. -->
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="../static/home.php">Home</a>
