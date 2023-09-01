@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Home - AT2 Sprint 2</title>
+        <title>Home - AT2 Sprint 3</title>
     </head>
     <body>
         <?php
@@ -51,13 +51,15 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-4 d-flex justify-content-center align-items-center">  
                     <div class="text-center">
-                        <h2 id="maintitle"><strong>Acme Arts</strong></h2><br><br>
+                        <h2 id="maintitle"><strong>Acme Arts</strong></h2> <br>                       
                         <p class="lead">
                             Welcome to the Acme Arts' Gallery<br>
                             World Class Artists<br>
                             Collectible Paintings<br>
                             Presented to you by KING RABBIT<br>
                         </p>
+                        <button id="readButton" type="button" class="btn btn-success">Read Aloud</button> 
+                        <p id="status"></p>
                     </div>                    
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-12 ">
