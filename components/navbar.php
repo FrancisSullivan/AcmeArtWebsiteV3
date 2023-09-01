@@ -8,7 +8,7 @@
             <ul class="navbar-nav">
                 <!-- Home Page. -->
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../static/home.php">Home</a>
+                    <a class="nav-link" aria-current="page" href="../static/home.php" style="color: black;">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Show All</a>
@@ -112,7 +112,7 @@
 
                     <!-- Using div instead of ul for input-group-append -->
                     <div class="input-group-append">
-                        <button class="btn btn-outline-success dropdown-toggle" style="color:white;" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search</button>
+                        <button class="btn btn-outline-success dropdown-toggle" style="color:black;" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search</button>
 
                         <div class="dropdown-menu">
                             <!-- Option to search in paintings -->
