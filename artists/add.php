@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Add new artists - AT2 Sprint 2</title>
+        <title>Add new artists - AT2 Sprint 3</title>
     </head>
     <!-- Body. -->
     <body>

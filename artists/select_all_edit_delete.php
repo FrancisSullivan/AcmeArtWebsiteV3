@@ -7,7 +7,7 @@
         include_once('../components/bootstrap.php');
         ?>
         <!-- Title. -->
-        <title>Edit/Delete Artist - AT2 Sprint 2</title>
+        <title>Edit/Delete Artist - AT2 Sprint 3</title>
     </head>
     <body>
         <?php
