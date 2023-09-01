@@ -102,10 +102,6 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="signup" href="../users/sign_up.php">Our Newsletters</a>
                 </li>
-                <li class="nav-item">
-                    <button id="readButton" type="button" class="btn btn-success">Read Aloud</button> 
-                    <p id="status"></p>
-                </li>
             </ul>
 
             <!-- Split button dropdown wrapper -->
