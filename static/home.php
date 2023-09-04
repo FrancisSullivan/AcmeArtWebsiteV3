@@ -16,10 +16,7 @@
 
         <div class="container-fluid mb-4 mt-4">
             <div class="row ">
-                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                <div class="col-lg-5 offset-lg-2 col-md-6 col-sm-12 col-12 ">
                     <div class="d-flex justify-content-center align-items-center">                
                         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
@@ -29,13 +26,13 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images\waterliliesandjapanesebridge.gif" class="d-block" alt="first_one" width="400" height="400">
+                                    <img src="../images\waterliliesandjapanesebridge.gif" class="d-block" alt="first_one">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images\weaver.gif" class="d-block" alt="second_one" width="400" height="400">
+                                    <img src="../images\weaver.gif" class="d-block" alt="second_one">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images\donitondo2.gif" class="d-block" alt="third_one" width="400" height="400">
+                                    <img src="../images\donitondo2.gif" class="d-block" alt="third_one">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -49,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-4 d-flex justify-content-center align-items-center">  
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-4 d-flex justify-content-center align-items-center">  
                     <div class="text-center">
                         <h2 id="maintitle"><strong>Acme Arts</strong></h2> <br>                       
                         <p class="lead">
@@ -61,9 +58,6 @@
                         <button id="readButton" type="button" class="btn btn-success">Read Aloud</button> 
                         <p id="status"></p>
                     </div>                    
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-12 ">
-
                 </div>
             </div>
             <div class="text-center mt-4">
