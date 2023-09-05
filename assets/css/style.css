@@ -23,7 +23,7 @@ html, body {
 
 .navbar a {
   text-decoration: none;
-  color: white; /* Set the text color to white */
+  color: black; /* Set the text color to black */
 }
 
 /* Style the navbar background */
