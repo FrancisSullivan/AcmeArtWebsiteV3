@@ -17,7 +17,7 @@
 
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-            $sql = "SELECT * FROM users WHERE user_id = :id";
+            $sql = "SELECT * FROM users_detail WHERE user_id = :id";
             $stmt = connect()->prepare($sql);
             $stmt->bindParam(':id', $id);
 

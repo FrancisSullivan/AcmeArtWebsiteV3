@@ -31,7 +31,7 @@
                     <?php
                 } else {
                     
-                    $statement = "DELETE FROM users WHERE is_pending = '1'";
+                    $statement = "DELETE FROM users_detail WHERE is_pending = '1'";
                     $execute = (connect()->query($statement));
                     echo "All pending records were deleted successfully! :).";
                 }

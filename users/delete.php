@@ -18,7 +18,7 @@
             <h2>Delete User</h2>
             <?php
             $selection = $_GET['id'];
-            $statement = "SELECT * FROM users WHERE user_id = '$selection'";
+            $statement = "SELECT * FROM users_detail WHERE user_id = '$selection'";
            
             //Table
             include_once('display.php');

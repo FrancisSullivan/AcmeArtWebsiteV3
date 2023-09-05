@@ -18,7 +18,7 @@
             <h2>Delete All Pending Users</h2>
             <?php
             
-            $statement = "SELECT * FROM users WHERE is_pending = '1'";
+            $statement = "SELECT * FROM users_detail WHERE is_pending = '1'";
            
             //Table
             include_once('display.php');

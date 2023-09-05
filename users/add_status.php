@@ -36,7 +36,7 @@
                     }
 
                      // Check for duplicate user name or email
-                     $duplicateCheck = "SELECT COUNT(*) as count FROM users WHERE user_email = :user_email";
+                     $duplicateCheck = "SELECT COUNT(*) as count FROM users_detail WHERE user_email = :user_email";
                      $duplicateExecute = connect()->prepare($duplicateCheck);
                      $duplicateExecute->bindValue(':user_email', $user_email);
                      $duplicateExecute->execute();
@@ -47,7 +47,7 @@
                         echo "User Name or Email already exists.";
                     } else {
                         // Insert new record
-                        $insertStatement = "INSERT INTO users (user_email, subscription_monthly, subscription_breaking_news) VALUES ('$user_email', '$subscription_monthly', '$subscription_breaking')";
+                        $insertStatement = "INSERT INTO users_detail (user_email, subscription_monthly, subscription_breaking_news) VALUES ('$user_email', '$subscription_monthly', '$subscription_breaking')";
                         $execute = (connect()->query($insertStatement));
                         echo "You have successfully subscribed! :).";
                     } }
@@ -55,12 +55,12 @@
                     elseif (isset($_POST["unsubscribe_button"])) {
                         $user_email = $_POST["add_email"] ?? '';
                         
-                        $sql = "SELECT user_id FROM users WHERE user_email = '$user_email'";
+                        $sql = "SELECT user_id FROM users_detail WHERE user_email = '$user_email'";
                         $result = connect()->query($sql);
                         
                         if ($result && $result->rowCount() > 0) {
                             $user_id = $result->fetch(PDO::FETCH_ASSOC)["user_id"];
-                            $updateStatement = "UPDATE users SET is_pending = 1 WHERE user_id = :user_id";
+                            $updateStatement = "UPDATE users_detail SET is_pending = 1 WHERE user_id = :user_id";
                             $updateExecute = connect()->prepare($updateStatement);
                             $updateExecute->bindValue(':user_id', $user_id, PDO::PARAM_INT);
         

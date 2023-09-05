@@ -17,7 +17,7 @@
             <!-- Heading. -->
             <h2>Pending Unsubscription Requests:</h2>
             <?php
-            $statement = "SELECT * from users where is_pending = '1'";
+            $statement = "SELECT * from users_detail where is_pending = '1'";
             $origin = "select_all_pending.php";
             include('display.php') ?>
             <a>
@@ -27,7 +27,7 @@
             <br>
             <h2>All Users:</h2>
             <?php
-            $statement = "SELECT * from users";
+            $statement = "SELECT * from users_detail";
             $origin = "select_all_edit_delete.php";
             //Calling Table
             include('display.php');
