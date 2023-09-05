@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <!-- Heading. -->
             <h2>Paintings by Artist</h2>
-            <button id="readButton" type="button" class="btn btn-success">Read Aloud</button> 
+            <button id="readButton" type="button" class="btn btn-success">🔊 Read Aloud</button> 
             <p id="status"></p>
             <?php
             include_once('../components/connect.php');

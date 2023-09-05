@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <!-- Heading. -->
             <h2>All Artists</h2>
-            <button id="readButton" type="button" class="btn btn-success">Read Aloud</button> 
+            <button id="readButton" type="button" class="btn btn-success">🔊 Read Aloud</button> 
             <p id="status"></p>
             <?php
             $statement = "SELECT * FROM artists";

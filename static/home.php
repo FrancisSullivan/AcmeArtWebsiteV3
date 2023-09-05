@@ -55,7 +55,7 @@
                             Collectible Paintings<br>
                             Presented to you by KING RABBIT<br>
                         </p>
-                        <button id="readButton" type="button" class="btn btn-success">Read Aloud</button> 
+                        <button id="readButton" type="button" class="btn btn-success">🔊 Read Aloud</button> 
                         <p id="status"></p>
                     </div>                    
                 </div>
