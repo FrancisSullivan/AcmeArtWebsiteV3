@@ -52,7 +52,7 @@
                         <p class="lead">
                             Welcome to the Acme Arts' Gallery<br>
                             World Class Artists<br>
-                            Fine Collection of Paintings<br>
+                            Collection of Fine Paintings<br>
                             Presented to you by KING RABBIT<br>
                         </p>
                         <button id="readButton" type="button" class="btn btn-success">🔊 Read Aloud</button> 
