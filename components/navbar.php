@@ -8,7 +8,7 @@
             <ul class="navbar-nav">
                 <!-- Home Page. -->
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../static/home.php" style="color: black;">Home</a>
+                    <a class="nav-link" aria-current="page" href="../static/home.php">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Show All</a>
